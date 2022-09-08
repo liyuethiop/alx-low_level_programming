@@ -1,6 +1,9 @@
 #include <stdio.h>
-/*function that prints*/
-int main(void)
+/**
+  * main - is compiled
+  *return 0
+  */
+int main(void) /*main*/
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);

@@ -9,6 +9,6 @@ int main(void)
 
 	for (i = 0; i <= 9; i++)
 		printf("%i", i);
-	printf('\n');
+	putchar('\n');
 	return (0);
 }

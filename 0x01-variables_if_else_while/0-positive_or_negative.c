@@ -21,11 +21,11 @@ int main(void)
 				n = rand() - RAND_MAX / 2;
 
 					if (n < 0)
-						printf(n, "is negative");
+						printf(n, "%i is negative");
 					else if (n > 0)
-						printf(n, "is posetive");
+						printf(n, "%i is posetive");
 					else
-						printf(n, "is zero");
+						printf(n, "%i is zero");
 
 					return (0);
 

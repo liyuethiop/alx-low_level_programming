@@ -3,7 +3,10 @@
 #include <time.h>
 
 /* more headers goes there */
-
+/**
+ * main - is excuted
+ * Return:0
+ */
 
 
 /* betty style doc for function main goes there */

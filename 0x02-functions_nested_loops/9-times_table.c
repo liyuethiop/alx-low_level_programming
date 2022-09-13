@@ -18,14 +18,17 @@ void times_table(void)
 			if (t == 0)
 			{
 				_putchar('0' + z % 10);
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
 			else
 			{
 				_putchar('0' + z / 10);
 				_putchar('0' + z % 10);
+				_putchar(',');
+				_putchar(' ');
 			}
-			_putchar(',');
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}

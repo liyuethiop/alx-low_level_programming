@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * print_last_digit - is the fun
@@ -9,6 +10,6 @@ int print_last_digit(int x)
 	int y;
 
 	y = x % 10;
-	_putchar(y);
+	printf("%i", y);
 	return (0);
 }

@@ -1,8 +1,19 @@
-#include <unistd.h>
+#include <stdio.h>
+#include "main.h"
 /**
- * Return: x
+ * main -entry
+ * Return:0
  */
-int _putchar(char x)
+int main(void)
 {
-	return (write(1, &x, 1));
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+	return (0);
 }

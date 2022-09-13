@@ -1,10 +1,8 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
- * main -entry
- * Return: 0
+ * Return: x
  */
-int print()
+int _putchar(char x)
 {
-	printf("_putchar\n");
-	return (0);
+	return (write(1, &x, 1));
 }

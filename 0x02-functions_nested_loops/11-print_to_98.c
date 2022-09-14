@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_to_98 - prints all natural num
  * @n: is the para
@@ -6,32 +7,16 @@
  */
 void print_to_98(int n)
 {
-	while (n <= 98)
+	if (n == 98)
+		printf(n);
+	while (n < 98)
 	{
-		if (n == 98)
-			_putchar('0' + n);
-		else if (n / 10 == 0)
-		{
-			_putchar(',');
-			_putchar(' ');
-			_putchar('0' + n);
-
-		}
-		else
-		{
-			_putchar(',');
-			_putchar(' ');
-			_putchar('0' + n / 10);
-			_putchar('0' + n % 10);
-		}
+		printf("%i", ", ", n);
 		n++;
 	}
-	while (n >= 98)
+	while (n > 98)
 	{
-		_putchar('0' + n / 10);
-		_putchar('0' + n % 10);
-		_putchar(',');
-		_putchar(' ');
+		printf("%i", ", ", n);
 		n--;
 	}
 }

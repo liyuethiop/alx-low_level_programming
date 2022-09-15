@@ -11,8 +11,7 @@
 int main(void)
 
 {
-	print_square(0);
-	print_square(10);
+	more_numbers();
 	return (0);
 
 }

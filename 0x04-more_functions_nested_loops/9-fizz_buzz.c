@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main - entry
  * Return:0
@@ -17,7 +16,7 @@ int main(void)
 		else if (i % 5 == 0)
 			printf("Buzz");
 		else
-			printf("%i", i);
+			printf("%d", i);
 		if (i < 100)
 			printf(" ");
 	}

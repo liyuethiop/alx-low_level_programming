@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_square - prints # in square
+ * print_triangle - prints # in triangle
  * @size: is the size of square
  */
 
-void print_square(int size)
+void print_triangle(int size)
 {
 	int i, j;
 

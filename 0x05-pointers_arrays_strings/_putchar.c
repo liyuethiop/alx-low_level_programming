@@ -1,25 +1,8 @@
 #include <unistd.h>
-
-
-
 /**
- *
- *  * Return: x
- *
- *   */
-
-
-
+ *Return: x
+ */
 int _putchar(char x)
-
-
-
 {
-
-
-
-			return (write(1, &x, 1));
-
-
-
+	return (write(1, &x, 1));
 }

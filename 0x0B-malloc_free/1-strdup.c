@@ -7,12 +7,12 @@
  */
 int _strlen(char *str)
 {
-	int i, len = 0;
+	int i = 0, len = 0;
 
-	for (i = 0; *str != '\0'; i++)
+	while (*(str +i))
 	{
 		len++;
-		str++;
+		i++;
 	}
 	return (len);
 }
@@ -24,7 +24,8 @@ int _strlen(char *str)
 
 char *_strdup(char *str)
 {
-	int j, len;
+	int j;
+	size_t len;
 	char *s;
 
 	len = _strlen(str) + 1;
@@ -35,8 +36,8 @@ char *_strdup(char *str)
 	if (s == NULL)
 		return (NULL);
 
-	for (j = 0; *str != '\0'; j++)
+	for (j = 0; j < len; j++)
 		*(s + j) = *(str + j);
-	*(s + j) = '\0';
+	/**(s + j) = '\0';*/
 	return (s);
 }

@@ -8,5 +8,20 @@
  * followed by the contents of s2
  */
 char *str_concat(char *s1, char *s2)
-{ 
+{
+	int i, j, len = 0;
+	char *c = (char *)malloc(sizeof(char) * 2);
+
+	for (i = 0; *s1 != '\0'; i++)
+		c[i] = s1[i];
+	while (c[len])
+		len++;
+	while (s2[j])
+	{
+		c[len] = s2[j];
+		len++;
+		j++;
+	}
+	c[len] = '\0';
+	return (c);
 }

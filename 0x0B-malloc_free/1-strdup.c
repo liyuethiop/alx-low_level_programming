@@ -24,12 +24,15 @@ int _strlen(char *str)
 
 char *_strdup(char *str)
 {
-	int j;
-	char *s = (char *)malloc(_strlen(str) + 1);
+	int j, len;
+	char *s;
+
+	len = _strlen(str) +1;
+	s = (char *)malloc(len);
 
 	if (str == NULL)
 		return (NULL);
-	if (s ==NULL)
+	if (s == NULL)
 		return (NULL);
 	for (j = 0; *str != '\0'; j++)
 		s[j] = str[j];

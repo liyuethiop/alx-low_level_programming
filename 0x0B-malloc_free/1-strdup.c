@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * _strlen - will return the length of the string
- *_strdup - will return a pointer to a newly allocated space in memory
+ * _strdup - will return a pointer to a newly allocated space in memory
  * @str: is the string to be copied
  * Return:pointer to the duplicated string
  */

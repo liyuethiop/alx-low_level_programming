@@ -27,15 +27,16 @@ char *_strdup(char *str)
 	int j, len;
 	char *s;
 
-	len = _strlen(str) +1;
+	len = _strlen(str) + 1;
 	s = (char *)malloc(len);
 
 	if (str == NULL)
 		return (NULL);
 	if (s == NULL)
 		return (NULL);
+
 	for (j = 0; *str != '\0'; j++)
-		s[j] = str[j];
-	s[j] = '\0';
+		*(s + j) = *(str + j);
+	*(s + j) = '\0';
 	return (s);
 }

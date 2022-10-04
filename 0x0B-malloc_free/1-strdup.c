@@ -36,8 +36,8 @@ char *_strdup(char *str)
 	if (s == NULL)
 		return (NULL);
 
-	for (j = 0; j < len; j++)
+	for (j = 0; *str != '\0'; j++)
 		*(s + j) = *(str + j);
-	/**(s + j) = '\0';*/
+	*(s + j) = '\0';
 	return (s);
 }

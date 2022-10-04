@@ -22,13 +22,16 @@ char *str_concat(char *s1, char *s2)
 		len2++, j++;
 	size = len1 + len2 + 1;
 
-	c = (char *)malloc(sizeof(char) * size);
+	c = malloc(sizeof(char) * size);
 	if (c == NULL)
 		return (NULL);
 
-	j = 0;
-	for (i = 0; i < len1; i++)
+	j = 0, i = 0;
+	while (i < len1)
+	{
 		*(c + i) = *(s1 + i);
+		i++;
+	}
 	while (j < len2)
 	{
 		*(c + i) = *(s2 + j);

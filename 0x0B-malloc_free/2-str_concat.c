@@ -8,6 +8,5 @@
  * followed by the contents of s2
  */
 char *str_concat(char *s1, char *s2)
-{
-	char *c 
+{ 
 }

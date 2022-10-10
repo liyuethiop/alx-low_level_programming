@@ -5,9 +5,8 @@
  * @argv: 2nd parameter
  * Return:0
  */
-int main(int argc, char *argv[])
+int main(void)
 {
-	if (argc > 0)
-		printf("%s\n", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }

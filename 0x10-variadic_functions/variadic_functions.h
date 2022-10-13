@@ -1,7 +1,7 @@
 #ifndef VARIADIc_FUN
 #define VARIADIC_FUN
 #include <stdio.h>
-#include <stdrag.h>
+#include <stdarg.h>
 
 int sum_them_all(const unsigned int n, ...);
 

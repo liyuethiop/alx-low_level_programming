@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- * /
+ * print_char - prints char
+ * @ch:the char
  */
 void print_char(va_list ch)
 {
@@ -11,8 +12,7 @@ void print_char(va_list ch)
 
 /**
  * print_int - prints int
- * @x:int to be printed
- * Return:x;
+ * @i:int to be printed
  */
 void print_int(va_list i)
 {
@@ -20,7 +20,8 @@ void print_int(va_list i)
 }
 
 /**
- *
+ * print_float - prints float
+ * @f:the float
  */
 void print_float(va_list f)
 {
@@ -28,16 +29,16 @@ void print_float(va_list f)
 }
 
 /**
- *
+ * print_string - prints string
+ * @s:the string
  */
 void print_string(va_list s)
 {
-	char *x;
+	char *x, *y;
 
 	x = va_arg(s, char *);
-	if (x == NULL)
-		x = "(nil)";
-	printf("%s", x);
+	y = x == NULL ? "(nil)" : x;
+	printf("%s", y);
 }
 
 /**
@@ -46,23 +47,33 @@ void print_string(va_list s)
  */
 void print_all(const char * const format, ...)
 {
-	tp var[] ={
+	tp var[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
-		{"s", print_string}
+		{"s", print_string},
+		{NULL, NULL}
 	};
 	va_list ptr;
-	int i = 0;
+	int i = 0, j = 0;
 
 	va_start(ptr, format);
-	while (*format)
+	while (format != NULL && format[i])
 	{
-		while (i < 4)
+		j = 0;
+		while (var[j].ch)
 		{
-			if (format == var[i].ch)
-				var[i].f(ptr);
+			if (format[i] == *(var[j].ch))
+			{
+				var[j].f(ptr);
+				break;
+			}
+			j++;
 		}
-		printf(",");
+		if (var[j + 1].ch)
+			printf(", ");
+		i++;
 	}
+	printf("\n");
+	va_end(ptr);
 }

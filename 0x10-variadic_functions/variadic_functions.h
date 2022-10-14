@@ -1,7 +1,6 @@
 #ifndef VARIADIc_FUN
 #define VARIADIC_FUN
 #include <stdio.h>
-#include <stdarg.h>
 
 /**
  * struct type - holds different data type

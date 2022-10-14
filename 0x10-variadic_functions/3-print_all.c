@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
-		if (var[j].ch && var[j + 1].ch)
+		if (var[j].ch && format[i + 1])
 			printf(", ");
 		i++;
 	}

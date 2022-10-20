@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-/*
+/**
  * add_node - adds a new node at the beginning
  * @head: pointer to head
  * @str: string to be added

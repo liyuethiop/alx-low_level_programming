@@ -24,26 +24,44 @@ int main(void)
 
 	    list_t *head;
 
+	        list_t *new;
+
+		    list_t hello = {"World", 5, NULL};
+
+		        size_t n;
 
 
-	        head = NULL;
 
-		    add_node_end(&head, "Bob");
+			    head = &hello;
 
-		        add_node_end(&head, "&");
+			        new = malloc(sizeof(list_t));
 
-			    add_node_end(&head, "Kris");
+				    if (new == NULL)
 
-			        add_node_end(&head, "love");
+					        {
 
-				    add_node_end(&head, "asm");
+							        printf("Error\n");
 
-				        print_list(head);
+								        return (1);
 
-					    free_list(head);
+									    }
 
-					        head = NULL;
+				        new->str = strdup("Hello");
 
-						    return (0);
+					    new->len = 5;
+
+					        new->next = head;
+
+						    head = new;
+
+						        n = list_len(head);
+
+							    printf("-> %lu elements\n", n);
+
+							        free(new->str);
+
+								    free(new);
+
+								        return (0);
 
 }

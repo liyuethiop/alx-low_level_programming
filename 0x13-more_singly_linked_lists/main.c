@@ -24,38 +24,36 @@ int main(void)
 
 	    listint_t *head;
 
-	        listint_t *node;
 
 
+	        head = NULL;
 
-		    head = NULL;
+		    add_nodeint_end(&head, 0);
 
-		        add_nodeint_end(&head, 0);
+		        add_nodeint_end(&head, 1);
 
-			    add_nodeint_end(&head, 1);
+			    add_nodeint_end(&head, 2);
 
-			        add_nodeint_end(&head, 2);
+			        add_nodeint_end(&head, 3);
 
-				    add_nodeint_end(&head, 3);
+				    add_nodeint_end(&head, 4);
 
-				        add_nodeint_end(&head, 4);
+				        add_nodeint_end(&head, 98);
 
-					    add_nodeint_end(&head, 98);
+					    add_nodeint_end(&head, 402);
 
-					        add_nodeint_end(&head, 402);
+					        add_nodeint_end(&head, 1024);
 
-						    add_nodeint_end(&head, 1024);
+						    print_listint(head);
 
-						        print_listint(head);
+						        printf("-----------------\n");
 
-							    node = get_nodeint_at_index(head, 5);
+							    insert_nodeint_at_index(&head, 5, 4096);
 
-							        printf("%d\n", node->n);
+							        print_listint(head);
 
-								    print_listint(head);
+								    free_listint2(&head);
 
-								        free_listint2(&head);
-
-									    return (0);
+								        return (0);
 
 }

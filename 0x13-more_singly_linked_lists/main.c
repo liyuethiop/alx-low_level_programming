@@ -12,7 +12,7 @@
  *
  *  * main - check the code
  *
- *   * 
+ *   *
  *
  *    * Return: Always 0.
  *
@@ -24,39 +24,31 @@ int main(void)
 
 	    listint_t *head;
 
-	        listint_t *new;
-
-		    listint_t hello = {8, NULL};
-
-		        size_t n;
 
 
+	        head = NULL;
 
-			    head = &hello;
+		    add_nodeint_end(&head, 0);
 
-			        new = malloc(sizeof(listint_t));
+		        add_nodeint_end(&head, 1);
 
-				    if (new == NULL)
+			    add_nodeint_end(&head, 2);
 
-					        {
+			        add_nodeint_end(&head, 3);
 
-							        printf("Error\n");
+				    add_nodeint_end(&head, 4);
 
-								        return (1);
+				        add_nodeint_end(&head, 98);
 
-									    }
+					    add_nodeint_end(&head, 402);
 
-				        new->n = 9;
+					        add_nodeint_end(&head, 1024);
 
-					    new->next = head;
+						    print_listint(head);
 
-					        head = new;
+						        free_listint2(&head);
 
-						    n = print_listint(head);
-
-						        printf("-> %lu elements\n", n);
-
-							    free(new);
+							    printf("%p\n", (void *)head);
 
 							        return (0);
 

@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_dlistint - prints doubly linked list
  * @h: head
@@ -6,7 +8,7 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *temp = malloc(sizeof(dlistint_t));
+	const dlistint_t *temp = malloc(sizeof(dlistint_t));
 	int no = 0;
 
 	temp = h;
